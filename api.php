@@ -262,7 +262,7 @@
          ],
          [
             "name"       => "radicheta",
-            "img"        => "http://tendi.com.ar/nopcommerce/content/images/thumbs/0001053_1-atado-de-radicheta_300.jpeg",
+            "img"        => "https://http2.mlstatic.com/D_NQ_NP_957712-MLA31886935063_082019-O.webp",
             "season"     => ["autumn", "winter"]
          ],
          [

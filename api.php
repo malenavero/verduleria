@@ -12,7 +12,7 @@
         ],
         [
            "name"       => "calabaza",
-           "img"        => "http://assets.stickpng.com/images/585ea823cb11b227491c3542.png",
+           "img"        => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBKeW_soVT4GjEpQ663Hd17DmpAHUss06n-SSY4Do6c6uY_Bn2SBsI8W7Vy2kUHh2xQo8&usqp=CAU",
            "season"     => ["summer", "autumn", "winter"]
         ],
         [
@@ -27,12 +27,12 @@
          ],
          [
             "name"       => "espárrago",
-            "img"        => "https://picsum.photos/200/200",
+            "img"        => "https://www.hoyverdurascongeladas.com/wp-content/uploads/2018/06/esparragos-ampl.jpg",
             "season"     => ["summer", "spring"]
          ],
          [
             "name"       => "morrón",
-            "img"        => "https://picsum.photos/200/200",
+            "img"        => "https://freepngimg.com/thumb/pepper/1-red-pepper-png-image.png",
             "season"     => ["summer"]
          ],
          [
@@ -47,7 +47,7 @@
          ],
          [
             "name"       => "pepino",
-            "img"        => "https://picsum.photos/200/200",
+            "img"        => "https://freepngimg.com/thumb/cucumber/4-green-cucumber-png-image.png",
             "season"     => ["summer"]
          ],
          [
@@ -62,32 +62,32 @@
          ],
          [
             "name"       => "choclo",
-            "img"        => "",
+            "img"        => "https://freepngimg.com/thumb/corn/2-corn-png-image.png",
             "season"     => ["summer"]
          ],
          [
             "name"       => "frambuesa",
-            "img"        => "",
+            "img"        => "https://freepngimg.com/thumb/raspberry/3-rraspberry-png-image.png",
             "season"     => ["summer", "spring"]
          ],
          [
             "name"       => "mora",
-            "img"        => "",
+            "img"        => "https://freepngimg.com/thumb/blackberry/9-2-blackberry-fruit-transparent.png",
             "season"     => ["summer"]
          ],
          [
             "name"       => "manzana",
-            "img"        => "",
+            "img"        => "https://freepngimg.com/thumb/apple/52-apple-png-image.png",
             "season"     => ["summer", "spring"]
          ],
          [
             "name"       => "sandía",
-            "img"        => "",
+            "img"        => "https://freepngimg.com/thumb/watermelon/2-2-watermelon-free-download-png.png",
             "season"     => ["summer"]
          ],
          [
             "name"       => "uva",
-            "img"        => "",
+            "img"        => "https://freepngimg.com/thumb/grape/11-grape-png-image-download-picture.png",
             "season"     => ["summer"]
          ],
          [
@@ -97,7 +97,7 @@
          ],
          [
             "name"       => "pelón",
-            "img"        => "",
+            "img"        => "https://statics.dinoonline.com.ar/imagenes/large_460x460/3390324_l.jpg",
             "season"     => ["summer"]
          ],
          [
@@ -107,22 +107,22 @@
          ],
          [
             "name"       => "arándanos",
-            "img"        => "",
+            "img"        => "https://www.naturvital.com/upload/media/ingredient/0001/01/bc05c8afe4ccd0b655ea089c389002f738021a02.jpeg",
             "season"     => ["summer", "spring"]
          ],
          [
             "name"       => "frutilla",
-            "img"        => "https://picsum.photos/200/200",
+            "img"        => "https://www.collinsdictionary.com/images/thumb/strawberry_227472010_250.jpg?version=4.0.161",
             "season"     => ["summer", "spring"]
          ],
          [
             "name"       => "higo",
-            "img"        => "",
+            "img"        => "https://soycomocomo.es/media/2015/07/higos.jpg",
             "season"     => ["summer"]
          ],
          [
             "name"       => "melón",
-            "img"        => "",
+            "img"        => "https://storage.googleapis.com/portalfruticola/2019/11/9ed97253-mel%C3%B3n-adobestock_189510127-1024x710.jpeg",
             "season"     => ["summer"]
          ],
          [
@@ -132,7 +132,7 @@
          ],
          [
             "name"       => "ananá",
-            "img"        => "",
+            "img"        => "https://www.collinsdictionary.com/images/thumb/pineapple_124985672_250.jpg?version=4.0.161",
             "season"     => ["summer", "spring"]
          ],
          [
@@ -142,12 +142,12 @@
          ],
          [
             "name"       => "cereza",
-            "img"        => "",
+            "img"        => "https://freepngimg.com/thumb/cherry/1-red-cherry-png-image-download.png",
             "season"     => ["summer", "spring"]
          ],
          [
             "name"       => "damasco",
-            "img"        => "",
+            "img"        => "https://frutasyverdurashuechuraba.cl/wp-content/uploads/2017/09/damasco.jpg",
             "season"     => ["summer"]
          ],
          [
@@ -166,13 +166,8 @@
             "season"     => ["spring"]
          ],
          [
-            "name"       => "radicha",
-            "img"        => "",
-            "season"     => ["spring"]
-         ],
-         [
             "name"       => "perejil",
-            "img"        => "",
+            "img"        => "https://feriamoviloficial.cl/wp-content/uploads/2020/07/perejil.jpg",
             "season"     => ["spring"]
          ],
          [
@@ -182,7 +177,7 @@
          ],
          [
             "name"       => "habas",
-            "img"        => "",
+            "img"        => "https://www.hoyverdurascongeladas.com/wp-content/uploads/2018/06/habas-ampl.jpg",
             "season"     => ["spring"]
          ],
          [
@@ -202,7 +197,7 @@
          ],
          [
             "name"       => "alcaucil",
-            "img"        => "",
+            "img"        => "https://freepngimg.com/thumb/artichokes/23094-5-artichokes-free-download.png",
             "season"     => ["spring"]
          ],
          [
@@ -246,7 +241,7 @@
             "season"     => ["autumn", "winter"]
          ],
          [
-            "name"       => "cebolla de verdeo",
+            "name"       => "verdeo",
             "img"        => "https://www.repartienda.com/wp-content/uploads/2018/06/Cebolla-Verdo-650x520.jpg",
             "season"     => ["autumn", "winter"]
          ],

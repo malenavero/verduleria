@@ -18,7 +18,7 @@ require_once("./functions.php");
     <h1>FRUTAS Y VERDURAS DE ESTACIÓN EN ARGENTINA</h1>
     <h2><?php echo getSpanishSeason() ?></h2>
     <ul class="item-list">
-        <?php getSeasonArrayImgList() ?>
+        <?php getSeasonArrayList() ?>
     </ul>
     
 </body>

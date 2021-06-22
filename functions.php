@@ -2,7 +2,7 @@
     function getseason(){
         //obtiene la estacion actual         
             // Guardamos en una variable el día del año
-            $day = date('z');
+            $day = date('z');  
          
             // Si la fecha actual es anterior al 21 de marzo
             if ( $day < 79 || $day > 354) {
@@ -62,19 +62,20 @@
         return $seasonArray;
     }
 
-    function getSeasonArrayImgList(){
+    function getSeasonArrayList(){
         $seasonArray = getSeasonArray();
         for ($i = 0; $i < count($seasonArray); $i++){
-            echo "<li><img src = '" . $seasonArray[$i]['img'] . "' ></li>";  
+            echo 
+            "<li>
+                <div class = 'cap'>
+                    <p>" . $seasonArray[$i]['name'] . "</p>
+                </div>
+                <img src = '" . $seasonArray[$i]['img'] . "' >
+            </li>";  
             /* echo $seasonArray[$i]['name'];  */
          }
     }
-    function getSeasonArrayNameList(){
-        $seasonArray = getSeasonArray();
-        for ($i = 0; $i < count($seasonArray); $i++){
-            echo "<li>" . $seasonArray[$i]['name'] . "</li>";   
-         }
-    }
+
     
     
     

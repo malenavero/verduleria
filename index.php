@@ -1,5 +1,5 @@
 <?php
-require_once("./functions.php");
+require_once("./php/functions.php");
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,6 @@ require_once("./functions.php");
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<!--     <script src="./js/index.js"></script> -->
     <title>Frutas y Verduras</title>
 </head>
 <body>
@@ -29,9 +28,3 @@ require_once("./functions.php");
     
 </body>
 </html>
-
-<!-- PREGUNTAS 
-*COMO HAGO QUE TOME POR DEFECTO LA CURRENT SEASON 
-*FOTOS COLOR OPACO
-*default season current season
--->

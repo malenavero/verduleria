@@ -58,7 +58,7 @@
     function getSeasonArray(){
         //generate a new array only with season vegetables
 
-        $res = file_get_contents("http://localhost/repos/queComo/php/api.php");
+        $res = file_get_contents("http://localhost/repos/verduleria/php/api.php");
         $array_vegetables = json_decode($res, true);
         $activeSeason = getActiveSeason();
         $seasonArray = [];

@@ -2,7 +2,7 @@
 /*
  * Este script es un endpoint que devuelve un array de arrays, con información
  * de frutas y verduras de estacion. El formato de retorno de este endpoint es JSON.
- * MEJORAS: convertir seasson a un array ya que hay frutas que estan en mas de una
+
  */
 	$vegetables = [
         [

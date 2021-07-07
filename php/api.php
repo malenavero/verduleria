@@ -41,7 +41,7 @@
             "season"     => ["summer"]
          ],
          [
-            "name"       => "chauchas",
+            "name"       => "chaucha",
             "img"        => "http://www.aproduco.org.ar/wp-content/uploads/2014/08/ap-s-p-0043.jpg",
             "season"     => ["summer", "autumn", "winter"]
          ],
@@ -211,7 +211,7 @@
             "season"     => ["spring", "autumn", "winter"]
          ],
          [
-            "name"       => "aceitunas",
+            "name"       => "aceituna",
             "img"        => "https://carbonell-oliveoil.com/themes/user/site/default/asset/img/familia/aceitunas-verdes-manzanillas-info.jpg",
             "season"     => ["autumn", "winter"]
          ],
@@ -231,7 +231,7 @@
             "season"     => ["autumn", "winter"]
          ],
          [
-            "name"       => "brocolí",
+            "name"       => "brócoli",
             "img"        => "https://freepngimg.com/thumb/broccoli/12-broccoli-png-image-with-transparent-background.png",
             "season"     => ["autumn", "winter"]
          ],

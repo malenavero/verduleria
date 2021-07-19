@@ -1,26 +1,21 @@
 <?php
     function getCurrentSeason(){
-        //get current season in Argentina
-
-            // Guardamos en una variable el día del año
-            $day = date('z');  
-         
-            // Si la fecha actual es anterior al 21 de marzo
+        //get current season in Argentina            
+            $day = date('z');    
+            // Guardamos en una variable el día del año                 
             if ( $day < 79 || $day > 354) {
-                $currentSeason = 'summer';
-         
-            // Si la fecha actual es anterior al 21 de junio
+                $currentSeason = 'summer';   
+            // Si la fecha actual es anterior al 21 de marzo      
             } elseif ( $day < 171 ) {
-                $currentSeason = 'autumn';
-         
-            // Si la fecha actual es anterior al 21 de septiembre
+                $currentSeason = 'autumn';   
+            // Si la fecha actual es anterior al 21 de junio      
             } elseif ( $day < 263 ) {
-                $currentSeason = 'winter';
-         
-            // Si la fecha actual es anterior al 21 de diciembre
+                $currentSeason = 'winter'; 
+            // Si la fecha actual es anterior al 21 de septiembre        
             } elseif ( $day < 354 ) {
                 $currentSeason = 'spring';
             }     
+            // Si la fecha actual es anterior al 21 de diciembre
         return $currentSeason;       
     }
 
@@ -58,7 +53,11 @@
     function getSeasonArray(){
         //generate a new array only with season vegetables
 
-        $res = file_get_contents("http://localhost/repos/verduleria/php/api.php");
+        $current_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $path_info    = pathinfo( $current_link );
+        $api_verdus = $path_info["dirname"] . "/" . $path_info["basename"] . "/php/api.php";
+        $res = file_get_contents("$api_verdus");
+       
         $array_vegetables = json_decode($res, true);
         $activeSeason = getActiveSeason();
         $seasonArray = [];
@@ -88,7 +87,7 @@
                 </div>
                 <img src = '" . $seasonArray[$i]['img'] . "' >
             </li>";  
-            /* echo $seasonArray[$i]['name'];  */
+
          }
     }
 
@@ -116,4 +115,3 @@
             }
         }
     }
-?>

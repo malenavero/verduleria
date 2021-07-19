@@ -1,4 +1,8 @@
 <?php
+    define( "DEV_URL",  "http://localhost/repos/verduleria/php/api.php" );
+    define( "TEST_URL", "https://verduleria-de-estacion.000webhostapp.com/php/api.php" );
+    define( "PROD_URL", "https://cursos.altcooperativa.com/portfolio/malenavero/verduleria/php/api.php" );    
+    
     function getCurrentSeason(){
         //Trae la estacion actual en argentina            
         $day = date('z');    
@@ -48,19 +52,9 @@
     };
 
     function getSeasonArray(){
-        //genera un array con los vegetales de la estacion activa. Consume la api interna de vegetales.
-        $current_link = ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] === 'on' ? "https" : "http" ) . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-            //devuelve link actual
-        $path_info    = pathinfo( $current_link );
-            //genera un array con info del path
-        if (empty($_GET["season"])){
-            $api_verdus = $path_info["dirname"] . "/" . $path_info["basename"] . "/php/api.php";         
-        } else {
-            $api_verdus = $path_info["dirname"] . "/php/api.php"; 
-        }
-            //contruye el path de la api segun el host
-        $res = file_get_contents( $api_verdus );//$res = file_get_contents("http://localhost/repos/verduleria/php/api.php");
-            //llamado a la api       
+        $res = file_get_contents( DEV_URL );
+        //$res = file_get_contents( TEST_URL );
+        //$res = file_get_contents( PROD_URL );
         $array_vegetables = json_decode($res, true);
         $activeSeason = getActiveSeason();
         $seasonArray = [];

@@ -27,7 +27,7 @@
               break;
             case 'summer':
                 return 'Verano';
-            break;
+                break;
             case 'winter':
                 return 'Invierno';
                 break;
@@ -53,11 +53,18 @@
         //devuelve link actual
         $path_info    = pathinfo( $current_link );
         //genera un array con info del path
-        $api_verdus = $path_info["dirname"] . "/" . $path_info["basename"] . "/php/api.php";
+        if (empty($_GET["season"])){
+            $api_verdus = $path_info["dirname"] . "/" . $path_info["basename"] . "/php/api.php";         
+        } else {
+            $api_verdus = $path_info["dirname"] . "/php/api.php"; 
+        }
         //contruye el path de la api segun el host
-        $res = file_get_contents("$api_verdus");
-        //llamdo a la api       
+        //$res = file_get_contents("http://localhost/repos/verduleria/php/api.php");
+        $res = file_get_contents( $api_verdus );
+      
+        //llamado a la api       
         $array_vegetables = json_decode($res, true);
+
         $activeSeason = getActiveSeason();
         $seasonArray = [];
         for ($i = 0; $i < count($array_vegetables); $i++){
@@ -70,6 +77,7 @@
                 }
             }            
         }
+
         return $seasonArray;
     }
 

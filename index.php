@@ -13,18 +13,14 @@ require_once("./php/functions.php");
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <title>VERDULERIA</title>
 </head>
-<body>
-    
+<body>    
     <h1>FRUTAS Y VERDURAS DE ESTACIÓN EN ARGENTINA</h1>    
     <ul class="season-list">
         <?php getSeasonList() ?>
     </ul>
-
-    <h2><?php echo toSpanish(getActiveSeason()) ?></h2>
-    
+    <h2><?php echo toSpanish(getActiveSeason()) ?></h2>    
     <ul class="item-list">
         <?php getSeasonArrayList() ?>
-    </ul>
-    
+    </ul>    
 </body>
 </html>

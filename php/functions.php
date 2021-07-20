@@ -1,7 +1,8 @@
 <?php
+/*
     define( "DEV_URL",  "http://localhost/repos/verduleria/php/api.php" );
     define( "TEST_URL", "https://verduleria-de-estacion.000webhostapp.com/php/api.php" );
-    define( "PROD_URL", "https://cursos.altcooperativa.com/portfolio/malenavero/verduleria/php/api.php" );    
+    define( "PROD_URL", "https://cursos.altcooperativa.com/portfolio/malenavero/verduleria/php/api.php" );    */
     
     function getCurrentSeason(){
         //Trae la estacion actual en argentina            
@@ -48,13 +49,14 @@
        } else {
            $activeSeason = $_GET["season"];
        };
+
        return $activeSeason;
     };
 
-    function getSeasonArray(){
-        $res = file_get_contents( DEV_URL );
+   /*function getSeasonArray(){
+        //$res = file_get_contents( DEV_URL );
         //$res = file_get_contents( TEST_URL );
-        //$res = file_get_contents( PROD_URL );
+        $res = file_get_contents( PROD_URL );
         $array_vegetables = json_decode($res, true);
         $activeSeason = getActiveSeason();
         $seasonArray = [];
@@ -69,11 +71,41 @@
             };            
         };
         return $seasonArray;
+    };*/
+
+    function getSeasonArray(){
+        $current_link       = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $parse_url          = parse_url( $current_link );
+        $link               = $parse_url['scheme'] . "://" . $parse_url['host'] . $parse_url['path'] . "php/api.php";   
+
+        if ( !empty($_GET["season"])) {
+            //si se pasa parametro reconstruyo la url
+            $link = strstr($link, 'index', true) . "php/api.php";
+        };
+
+        $res                = file_get_contents( $link );
+        $array_vegetables   = json_decode($res, true);
+        $activeSeason       = getActiveSeason();
+        $seasonArray        = [];
+
+        for ($i = 0; $i < count($array_vegetables); $i++){
+            foreach($array_vegetables[$i]['season'] as $value){
+                if ( $value == $activeSeason ){
+                    $seasonArray[] = [
+                        'name'  => $array_vegetables[$i]['name'],
+                        'img'   => $array_vegetables[$i]['img']
+                    ];
+                };
+            };            
+        };
+
+        return $seasonArray;
     };
 
     function getSeasonArrayList(){
         //genera una lista con el array de las verduras de estacion
         $seasonArray = getSeasonArray();
+
         for ($i = 0; $i < count($seasonArray); $i++){
             echo 
                 "<li>
@@ -89,6 +121,7 @@
         //genera una lista con las estaciones del anio        
         $arraySeasons = ['summer', 'autumn', 'winter', 'spring'];        
         $activeSeason = getActiveSeason();
+
         foreach( $arraySeasons as $season ){
             $estacion = toSpanish($season);
             if ( $season === $activeSeason ){
